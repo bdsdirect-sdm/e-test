@@ -1,0 +1,147 @@
+/* Container for the entire section */
+section.sign-up-section {
+    background: #f9ffff;
+}
+
+/* Parent container for the entire form (flexbox for 2-column layout) */
+.parent-div {
+    display: flex;
+    min-height: calc(100vh - 39px);
+}
+
+/* Left section (background area) */
+.left-login-wrap {
+    background: linear-gradient(to bottom, #43d79e 0%, #35c0e4 100%);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Right section (form area) */
+.sign-up-form {
+    width: 50%;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+}
+
+.form-heading h2 {
+    font-size: 30px;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Input field styles */
+.field-wrap.input-fields {
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #43d79e;;
+}
+
+/* Doctor Type (select) specific styling */
+select {
+    appearance: none;  /* Remove default dropdown arrow for a custom look */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"%3E%3Cpath fill="none" stroke="%23333" stroke-width="1" d="M0 3 L5 8 L10 3" /%3E%3C/svg%3E') no-repeat right 15px center;
+    background-size: 10px;
+}
+
+select:focus {
+    border-color: #35c0e4;  /* Highlight border when focused */
+    outline: none;
+}
+
+/* Specific input field types */
+input[type="email"],
+input[type="password"] {
+    padding: 15px;
+}
+
+/* Button styles */
+.sign-up-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #35c0e4;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sign-up-btn:hover {
+    background-color: #2ca6d4;
+}
+
+/* Bottom text for redirection to Login page */
+.bottom-sec {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bottom-sec p {
+    color: #666;
+    opacity: 70%;
+}
+
+.bottom-sec span a {
+    text-decoration: none;
+    color: #35c0e4;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .parent-div {
+        flex-direction: column;
+    }
+
+    .sign-up-form {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .left-login-wrap {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sign-up-form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    input, select {
+        padding: 12px;
+    }
+
+    .sign-up-btn {
+        width: 100%;
+    }
+}

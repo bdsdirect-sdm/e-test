@@ -1,0 +1,73 @@
+/* Make sure the sidebar is positioned correctly */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    /* Adjust as needed */
+    height: 100vh;
+    /* Full viewport height */
+    background-color: #f8f9fa;
+    padding: 20px;
+    z-index: 1000;
+    /* Ensure it stays on top */
+}
+
+.required:after {
+    content:" *";
+    color: red;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    /* Header color */
+    color: #fff;
+    padding: 20px;
+    z-index: 999;
+    /* Header stays above content */
+}
+
+/* Profile container padding to prevent overlap with sidebar and header */
+.profile-container {
+    margin-left: 270px;
+    /* Adjust according to sidebar width */
+    margin-top: 80px;
+    /* Adjust for the header height */
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile title styling */
+.profile-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Modal button styling */
+.btn-primary {
+    background-color: #35c0e4;
+    border-color: #35c0e4;
+}
+
+.btn-primary:hover {
+    background-color: #2a99b6;
+    border-color: #2a99b6;
+}
+
+/* Ensure the modal fits well within the viewport */
+.modal-body {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+}
